@@ -1,0 +1,32 @@
+{
+    "version": "0.7.0",
+    "description": "General-purpose programming language designed for robustness, optimality, and maintainability.",
+    "homepage": "https://ziglang.org/",
+    "license": "MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2019"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ziglang/zig/releases/download/0.7.0/zig-windows-x86_64-0.7.0.zip",
+            "hash": "965f56c0a36f9cda2125e3a348bc654f7f155e2804c3667d231775ec228f8553",
+            "extract_dir": "zig-windows-x86_64-0.7.0"
+        }
+    },
+    "bin": "zig.exe",
+    "checkver": {
+        "github": "https://github.com/zig-lang/zig/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ziglang/zig/releases/download/$version/zig-windows-x86_64-$version.zip",
+                "extract_dir": "zig-windows-x86_64-$version"
+            }
+        },
+        "hash": {
+            "url": "https://ziglang.org/download/",
+            "regex": "(?sm)$basename.*?$sha256"
+        }
+    }
+}

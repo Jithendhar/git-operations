@@ -1,0 +1,31 @@
+{
+    "version": "0.8.2",
+    "description": "A general purpose syntax highlighter in pure Go",
+    "homepage": "https://github.com/alecthomas/chroma",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/alecthomas/chroma/releases/download/v0.8.2/chroma-0.8.2-windows-amd64.tar.gz",
+            "hash": "3c994dc416b11c8acbdcd24c8d21583512b4468f77a8e3c47f42e64085184366"
+        },
+        "32bit": {
+            "url": "https://github.com/alecthomas/chroma/releases/download/v0.8.2/chroma-0.8.2-windows-386.tar.gz",
+            "hash": "8b18eb81fa30541032f9e404152ee6753e93f76a73e4f135111d4dde344a4274"
+        }
+    },
+    "bin": "chroma.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/alecthomas/chroma/releases/download/v$version/chroma-$version-windows-amd64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/alecthomas/chroma/releases/download/v$version/chroma-$version-windows-386.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/chroma-$version-checksums.txt"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.9.3",
+    "description": "Build tool aiming for Java and Scala.",
+    "homepage": "http://www.lihaoyi.com/mill/",
+    "license": "MIT",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "url": "https://github.com/lihaoyi/mill/releases/download/0.9.3/0.9.3-assembly#/mill.bat",
+    "hash": "4bcbd611c30d65906e5a04aa3404feb5da7b181999b17ef9b257a2bc39aa1a0c",
+    "bin": "mill.bat",
+    "checkver": {
+        "github": "https://github.com/lihaoyi/mill"
+    },
+    "autoupdate": {
+        "url": "https://github.com/lihaoyi/mill/releases/download/$matchHead/$version-assembly#/mill.bat"
+    }
+}

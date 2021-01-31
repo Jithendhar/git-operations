@@ -1,0 +1,29 @@
+{
+    "version": "1.17.0",
+    "description": "The IBM Cloud provider is used to manage provisioning and orchestration of IBM Cloud resources with the Terraform provisioning engine",
+    "homepage": "https://ibm-cloud.github.io/tf-ibm-docs/",
+    "license": "MPL-2.0",
+    "depends": "versions/terraform011",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/IBM-Cloud/terraform-provider-ibm/releases/download/v1.17.0/windows_amd64.zip",
+            "hash": "921d3ae339d4716f0ae645b1089f6a9f114bf799e8ccef63c0d8fe8e069e9749",
+            "installer": {
+                "script": "Copy-Item -Force \"$dir\\terraform-provider-ibm_v$version.exe\" \"$env:APPDATA\\terraform.d\\plugins\\windows_amd64\""
+            },
+            "uninstaller": {
+                "script": "Remove-Item \"$env:APPDATA\\terraform.d\\plugins\\windows_amd64\\terraform-provider-ibm_v$version.exe\" -Force"
+            }
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/IBM-Cloud/terraform-provider-ibm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/IBM-Cloud/terraform-provider-ibm/releases/download/v$version/windows_amd64.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "version": "0.25.0",
+    "description": "Camunda workflow instance monitor/manager",
+    "homepage": "https://docs.zeebe.io/operate-user-guide/",
+    "license": {
+        "identifier": "Zeebe Community License Version 1.0",
+        "url": "https://zeebe.io/legal/zeebe-community-license-1.0/"
+    },
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ],
+        "Zeebe": "zeebe",
+        "ElasticSearch": "extras/elasticsearch"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zeebe-io/zeebe/releases/download/0.25.3/camunda-operate-0.25.0.zip",
+            "hash": "sha1:ffbc80e46a9b2252672a2572afec513768bc0111"
+        }
+    },
+    "extract_dir": "camunda-operate-0.25.0",
+    "bin": [
+        [
+            "bin\\operate.bat",
+            "camunda-operate"
+        ]
+    ],
+    "persist": "config",
+    "checkver": {
+        "github": "https://github.com/zeebe-io/zeebe",
+        "regex": "download/(?<release>[\\d.]+)/camunda-operate-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zeebe-io/zeebe/releases/download/$matchRelease/camunda-operate-$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha1sum"
+        },
+        "extract_dir": "camunda-operate-$version"
+    }
+}

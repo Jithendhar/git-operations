@@ -1,0 +1,2 @@
+#!/bin/sh
+powershell.exe -noprofile -ex unrestricted "C:\Users\Jithendhar\scoop\apps\scoop\current\bin\scoop.ps1"  "$@"

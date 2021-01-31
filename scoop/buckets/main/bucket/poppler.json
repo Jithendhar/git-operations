@@ -1,0 +1,38 @@
+{
+    "version": "20.12.1-h7cbfaf2_0",
+    "description": "PDF rendering library",
+    "homepage": "https://anaconda.org/conda-forge/poppler",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://anaconda.org/conda-forge/poppler/20.12.1/download/win-64/poppler-20.12.1-h7cbfaf2_0.tar.bz2",
+            "hash": "8724e47aebcab9be9f979c4433ee38f003d31bd408298c8ec825cc0ca945ffbc"
+        }
+    },
+    "extract_dir": "Library",
+    "bin": [
+        "bin\\pdfattach.exe",
+        "bin\\pdfdetach.exe",
+        "bin\\pdffonts.exe",
+        "bin\\pdfimages.exe",
+        "bin\\pdfinfo.exe",
+        "bin\\pdfseparate.exe",
+        "bin\\pdftocairo.exe",
+        "bin\\pdftohtml.exe",
+        "bin\\pdftoppm.exe",
+        "bin\\pdftops.exe",
+        "bin\\pdftotext.exe",
+        "bin\\pdfunite.exe"
+    ],
+    "checkver": {
+        "url": "https://anaconda.org/conda-forge/poppler/files",
+        "regex": ">win-64/poppler-([\\w.-]+)\\.tar\\.bz2</a>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://anaconda.org/conda-forge/poppler/$matchHead/download/win-64/poppler-$version.tar.bz2"
+            }
+        }
+    }
+}

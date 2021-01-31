@@ -1,0 +1,47 @@
+{
+    "version": "0.25.3",
+    "description": "Distributed Workflow Engine for Microservices Orchestration",
+    "homepage": "https://zeebe.io",
+    "license": {
+        "identifier": "Zeebe Community License Version 1.0",
+        "url": "https://zeebe.io/legal/zeebe-community-license-1.0/"
+    },
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zeebe-io/zeebe/releases/download/0.25.3/zeebe-distribution-0.25.3.zip",
+            "hash": "sha1:dc999cf6919a51e40090813841d88d1640ba6ebf"
+        }
+    },
+    "extract_dir": "zeebe-broker-0.25.3",
+    "bin": [
+        [
+            "bin\\broker.bat",
+            "zeebe-broker"
+        ],
+        [
+            "bin\\gateway.bat",
+            "zeebe-gateway"
+        ],
+        "bin\\zbctl.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/zeebe-io/zeebe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zeebe-io/zeebe/releases/download/$version/zeebe-distribution-$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha1sum"
+        },
+        "extract_dir": "zeebe-broker-$version"
+    }
+}
